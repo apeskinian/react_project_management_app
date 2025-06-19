@@ -110,7 +110,12 @@ function App() {
 
   return (
     <main className="h-dvh my-8 flex gap-8">
-      <ProjectsSideBar onStartAddProject={handleStartAddProject} projects={projectsState.projects} onSelectProject={handleSelectProject} />
+      <ProjectsSideBar
+        onStartAddProject={handleStartAddProject}
+        projects={projectsState.projects}
+        onSelectProject={handleSelectProject}
+        selectedProjectId={projectsState.selectedProjectId}
+      />
       {content}
     </main>
   );
